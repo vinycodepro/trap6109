@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative h-screen overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-[#12091d] to-[#1a1230]" />
+      <div className="absolute inset-0 bg-linear-to-r from-black via-[#12091d] to-[#1a1230]" />
 
       <Image
         src="/images/trap.jpg"
