@@ -6,7 +6,6 @@ type MusicProps = {
   image: string;
   badge: string;
   title: string;
-  description: string;
   streamUrl: string;
 };
 
@@ -14,7 +13,6 @@ export default function Music({
   image,
   badge,
   title,
-  description,
   streamUrl,
 }: MusicProps) {
   return (
@@ -76,9 +74,6 @@ export default function Music({
                 {title}
               </h3>
 
-              <p className="mt-5 max-w-112.5 text-lg leading-8 text-gray-300">
-                {description}
-              </p>
 
               <a
                 href={streamUrl}

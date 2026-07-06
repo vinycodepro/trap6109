@@ -9,42 +9,41 @@ import {
 export default function Footer() {
   return (
     <footer className="border-t border-[#1d1a28] bg-[#09070d]">
-      <div className="mx-auto max-w-[1380px] px-6 py-16 lg:px-10">
+      <div className="mx-auto max-w-345 px-6 py-16 lg:px-10">
 
-        {/* Artist Name */}
-        <h2 className="text-center text-xl font-bold uppercase tracking-widest text-[#d8b44d]">
+        <h2 className="text-center text-xl font-bold uppercase tracking-widest text-[#f0eee9]">
           TRAP6109
         </h2>
 
         {/* Tagline */}
         <p className="mt-4 text-center text-lg text-gray-400">
-          Independent. Cinematic. Global.
+          Follow across socials and stay tuned for new music, videos, and live shows.
         </p>
 
         {/* Socials */}
         <div className="mt-10 flex justify-center gap-5">
 
           <SocialIcon
-            href="https://instagram.com"
+            href="https://instagram.com/trap6109"
             icon={<SiInstagram size={22} />}
             label="Instagram"
           />
 
           <SocialIcon
-            href="https://spotify.com"
+            href="https://spotify.com/trap6109"
             icon={<SiSpotify size={22} />}
             label="Spotify"
           />
 
           <SocialIcon
-            href="https://youtube.com"
+            href="https://youtube.com/trap6109"
             icon={<SiYoutube size={22} />}
             label="YouTube"
           />
 
           {/* Audiomack */}
           <SocialIcon
-            href="https://audiomack.com"
+            href="https://audiomack.com/trap6109"
             icon={<SiAudiomack size={22} />}
             label="Audiomack"
           />

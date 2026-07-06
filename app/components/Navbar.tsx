@@ -22,7 +22,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-yellow-500 font-bold tracking-widest"
+          className="text-white font-bold tracking-widest"
         >
           TRAP6109
         </Link>

@@ -5,18 +5,8 @@ export default function Newsletter() {
     <section className="w-full bg-[#0c0913] py-24">
       <div className="mx-auto max-w-345 px-6 lg:px-10">
         <div
-          className="
-            relative
-            overflow-hidden
-            rounded-4xl
-            border
-            border-[#5b4720]
-            bg-[#131019]
-            px-8
-            py-16
-            text-center
-            shadow-[0_0_60px_rgba(212,175,55,0.08)]
-          "
+          className="relative overflow-hidden rounded-4xl border  border-[#5b4720]  bg-[#131019]  px-8
+            py-16 text-center shadow-[0_0_60px_rgba(212,175,55,0.08)]"
         >
           {/* Purple Glow */}
           <div className="absolute right-0 top-0 h-full w-1/2 bg-linear-to-l from-purple-900/30 to-transparent" />
@@ -33,7 +23,6 @@ export default function Newsletter() {
             <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-gray-400">
               Be first to hear new music, exclusive drops, live shows,
               behind-the-scenes content, and early ticket access.
-              No spam — just the sound.
             </p>
 
             {/* Form */}
@@ -47,21 +36,8 @@ export default function Newsletter() {
                 <input
                   type="email"
                   placeholder="your@email.com"
-                  className="
-                    h-14
-                    w-full
-                    rounded-full
-                    border
-                    border-[#222]
-                    bg-[#0d0b12]
-                    pl-14
-                    pr-5
-                    text-white
-                    placeholder:text-gray-500
-                    outline-none
-                    transition
-                    focus:border-[#d8b44d]
-                  "
+                  className="h-14 w-full rounded-full border border-[#222]  bg-[#0d0b12] pl-14 pr-5 text-white placeholder:text-gray-500 outline-none transition
+                    focus:border-[#d8b44d]"
                 />
               </div>
 

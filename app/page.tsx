@@ -12,21 +12,21 @@ export default function Home() {
     id: "1",
     title: "TESTIMONY",
     category: "Official Music Video",
-    thumbnail: "/images/trap.jpg",
+    thumbnail: "/images/testimony.png",
     url: "https://www.youtube.com/watch?v=NhPfeYacZEY",
   },
   {
     id: "2",
     title: "Isolation",
     category: "Official Music Video",
-    thumbnail: "/images/trap.jpg",
+    thumbnail: "/images/isolation.png",
     url: "https://www.youtube.com/watch?v=EefXHHJUoCY",
   },
   {
     id: "3",
     title: "Envy",
     category: "Official Music Video",
-    thumbnail: "/images/trap.jpg",
+    thumbnail: "/images/envy.png",
     url: "https://www.youtube.com/watch?v=z1Ylz7JLb3I",
   },
 ];
@@ -36,10 +36,9 @@ export default function Home() {
       <Hero />
 
       <Music
-        image="/images/trap.jpg"
-        badge="New Album"
-        title="Midnight Frequency"
-        description="Twelve tracks of dark melodic trap recorded between dusk and dawn. Immersive bass, cinematic strings, and unfiltered storytelling."
+        image="/images/testimony.png"
+        badge="New Release"
+        title="TESTIMONY"
         streamUrl="https://youtube.com/@Trap6109-f9e"
       />
       <Videos videos={videos} />
