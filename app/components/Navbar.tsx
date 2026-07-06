@@ -5,12 +5,11 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { name: "Home", href: "/" },
-  { name: "Music", href: "/music" },
-  { name: "Videos", href: "/videos" },
-  { name: "Shows", href: "/shows" },
-  { name: "Shop", href: "/shop" },
-];
+  { name: "Home", href: "#" },
+  { name: "Music", href: "#music" },
+  { name: "Videos", href: "#videos" },
+  { name: "Shows", href: "#shows" },
+ ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -63,8 +62,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block py-3 text-white hover:text-yellow-400"
-              >
+                className="block py-3 text-4xl text-center font-extrabold font-sans text-white hover:text-yellow-400"              >
                 {link.name}
               </Link>
             ))}

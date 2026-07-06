@@ -33,17 +33,32 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      
+      <div id="home">
       <Hero />
-
+      </div>
+      
+      <div id="music">
       <Music
         image="/images/testimony.png"
         badge="New Release"
         title="TESTIMONY"
         streamUrl="https://youtube.com/@Trap6109-f9e"
       />
+      </div>
+
+      <div id="videos">
       <Videos videos={videos} />
+      </div>
+
+      <div id="shows">
       <Shows />
+      </div>
+
+      <div id="newsletter">
       <Newsletter />
+      </div>
+
       <Footer />
     </>
   );

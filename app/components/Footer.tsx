@@ -36,14 +36,14 @@ export default function Footer() {
           />
 
           <SocialIcon
-            href="https://youtube.com/trap6109"
+            href="https://youtube.com/@Trap6109-f9e"
             icon={<SiYoutube size={22} />}
             label="YouTube"
           />
 
           {/* Audiomack */}
           <SocialIcon
-            href="https://audiomack.com/trap6109"
+            href="https://audiomack.com/trap666109"
             icon={<SiAudiomack size={22} />}
             label="Audiomack"
           />
