@@ -16,17 +16,17 @@ type VideosProps = {
 
 export default function Videos({ videos }: VideosProps) {
   return (
-    <section className="w-full bg-[#0c0913] py-24 lg:py-28">
+    <section className="w-full bg-[#b0a9c4] py-24 lg:py-28">
       <div className="mx-auto max-w-345 px-6 lg:px-10">
 
         {/* Heading */}
         <div className="mb-14">
 
-          <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#d8b44d]">
+          <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#110e05]">
             Visuals
           </p>
 
-          <h2 className="mt-3 text-4xl font-bold uppercase text-white">
+          <h2 className="mt-3 text-4xl font-bold uppercase text-black">
             Featured Music Videos
           </h2>
        <div className="mt-3 h-1.25 w-24 rounded-full bg-linear-to-r from-[#d8b44d] via-[#d8b44d] via-25%

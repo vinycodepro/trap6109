@@ -17,15 +17,15 @@ type ShowsProps = {
 
 export default function Shows({ shows = [] }: ShowsProps) {
   return (
-    <section className="w-full bg-[#0c0913] py-24 lg:py-28">
+    <section className="w-full bg-[#cdc6df] py-24 lg:py-28">
       <div className="mx-auto max-w-345 px-6 lg:px-10">
         {/* Heading */}
         <div className="mb-14">
-          <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#d8b44d]">
+          <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#050402]">
             On Tour
           </p>
 
-          <h2 className="mt-3 text-4xl font-bold uppercase text-white">
+          <h2 className="mt-3 text-4xl font-bold uppercase text-black">
             Upcoming Shows
           </h2>
 
@@ -34,18 +34,8 @@ export default function Shows({ shows = [] }: ShowsProps) {
         </div>
 
         {/* Empty State */}
-        {shows.length === 0 ? (
-        <div
-  className="
-    rounded-[30px]
-    border
-    border-[#5b4720]
-    bg-[#131019]
-    px-10
-    py-20
-    text-center
-  "
->
+  {shows.length === 0 ? (
+        <div className="rounded-[30px] border border-[#5b4720] bg-[#291d3f] px-10 py-20 text-center">
   <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#d8b44d]/10">
     <CalendarDays className="h-10 w-10 text-[#d8b44d]" />
   </div>
@@ -63,16 +53,8 @@ export default function Shows({ shows = [] }: ShowsProps) {
   <div className="mt-10">
     <button
       disabled
-      className="
-        cursor-not-allowed
-        rounded-full
-        border
-        border-[#5b4720]
-        bg-[#0f0d15]
-        px-8
-        py-4
-        font-semibold
-        text-gray-500
+      className="cursor-not-allowed rounded-full border border-[#5b4720]
+        bg-[#0f0d15] px-8 py-4 font-semibold text-gray-500
       "
     >
       Tour Dates Coming Soon

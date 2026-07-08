@@ -16,15 +16,15 @@ export default function Music({
   streamUrl,
 }: MusicProps) {
   return (
-    <section className="w-full bg-[#0c0913] py-24 lg:py-28">
+    <section className="w-full bg-[#c4bcd6] py-24 lg:py-28">
       <div className="mx-auto max-w-345 px-6 lg:px-10">
         {/* Heading */}
         <div className="mb-12">
-          <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#d8b44d]">
+          <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#0c0a04]">
             Out Now
           </p>
 
-          <h2 className="text-4xl font-bold uppercase text-white">
+          <h2 className="text-4xl font-bold uppercase text-black">
             Latest Release
           </h2>
           {/* Decorative Line */}

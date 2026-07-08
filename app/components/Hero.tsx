@@ -19,14 +19,12 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-10 flex h-full items-center justify-center">
-        {/* Removed max-w-7xl restriction to allow text to hit the screen edges on mobile if needed */}
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <h1
-            className="font-anton uppercase font-black text-center select-none text-[#F8F9F3]
-              /* Massive responsive text: aggressive scaling on mobile, capped on desktop */
+            className="font-anton uppercase font-black text-center select-none text-[#a9aaa6]
               text-[clamp(6.5rem,26vw,14rem)] 
-              /* Tightened leading and tracking for large impact layout */
-              leading-[0.78] tracking-[-0.08em]
+
+              leading-[0.78] tracking-[0.02em]
               [text-shadow:0_3px_0_rgba(255,255,255,0.25),0_8px_18px_rgba(0,0,0,0.35),0_18px_45px_rgba(0,0,0,0.6)]"
           >
             <span className="block">TRAP</span>

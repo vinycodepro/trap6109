@@ -5,6 +5,7 @@ import Videos from "./components/Videos";
 import Shows from "./components/Shows";
 import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const videos = [

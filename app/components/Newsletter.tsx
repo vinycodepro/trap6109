@@ -2,10 +2,10 @@ import { Mail } from "lucide-react";
 
 export default function Newsletter() {
   return (
-    <section className="w-full bg-[#0c0913] py-24">
+    <section className="w-full bg-[#b3a8cc] py-24">
       <div className="mx-auto max-w-345 px-6 lg:px-10">
         <div
-          className="relative overflow-hidden rounded-4xl border  border-[#5b4720]  bg-[#131019]  px-8
+          className="relative overflow-hidden rounded-4xl border  border-[#5b4720]  bg-[#291d3f]  px-8
             py-16 text-center shadow-[0_0_60px_rgba(212,175,55,0.08)]"
         >
           {/* Purple Glow */}
