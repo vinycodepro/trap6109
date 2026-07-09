@@ -13,7 +13,7 @@ export default function Newsletter() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: "easeOut" }
+      transition: { duration: 0.7, type: "spring", stiffness: 80, damping: 25 }
     }
   };
 
@@ -27,7 +27,7 @@ export default function Newsletter() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, type: "spring", stiffness: 100, damping: 20 } }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

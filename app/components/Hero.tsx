@@ -30,7 +30,9 @@ export default function Hero() {
       transition: {
         delay: 0.2 + i * 0.2,
         duration: 0.8,
-        ease: "easeOut"
+        type: "spring",
+        stiffness: 100,
+        damping: 25
       }
     })
   };

@@ -28,7 +28,7 @@ export default function Videos({ videos }: VideosProps) {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, type: "spring", stiffness: 80, damping: 20 } }
   };
 
   const cardVariants = {
@@ -36,7 +36,7 @@ export default function Videos({ videos }: VideosProps) {
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.08, duration: 0.5, ease: "easeOut" }
+      transition: { delay: i * 0.08, duration: 0.5, type: "spring", stiffness: 100, damping: 20 }
     })
   };
 
