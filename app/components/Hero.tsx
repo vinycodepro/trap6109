@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
@@ -16,12 +16,12 @@ export default function Hero() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.8 } }
   };
 
-  const textVariants = {
+  const textVariants: Variants = {
     hidden: { opacity: 0, scale: 0.9, y: 40 },
     visible: (i: number) => ({
       opacity: 1,
@@ -30,7 +30,7 @@ export default function Hero() {
       transition: {
         delay: 0.2 + i * 0.2,
         duration: 0.8,
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
         damping: 25
       }

@@ -1,23 +1,23 @@
 "use client";
 
 import { Mail } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useState } from "react";
 
 export default function Newsletter() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, type: "spring", stiffness: 80, damping: 25 }
+      transition: { duration: 0.7, type: "spring" as const, stiffness: 80, damping: 25 }
     }
   };
 
-  const contentVariants = {
+  const contentVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -25,9 +25,9 @@ export default function Newsletter() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, type: "spring", stiffness: 100, damping: 20 } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, type: "spring" as const, stiffness: 100, damping: 20 } }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

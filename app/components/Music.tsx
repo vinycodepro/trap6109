@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 type MusicProps = {
   image: string;
@@ -16,7 +16,7 @@ export default function Music({
   title,
   streamUrl,
 }: MusicProps) {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -24,14 +24,14 @@ export default function Music({
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, type: "spring", stiffness: 80, damping: 20 } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, type: "spring" as const, stiffness: 80, damping: 20 } }
   };
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     hidden: { opacity: 0, scale: 0.95 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.7, type: "spring", stiffness: 80, damping: 25 } }
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.7, type: "spring" as const, stiffness: 80, damping: 25 } }
   };
 
   return (

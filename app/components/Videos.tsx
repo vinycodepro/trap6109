@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Play } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export type Video = {
   id: string;
@@ -18,7 +18,7 @@ type VideosProps = {
 };
 
 export default function Videos({ videos }: VideosProps) {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -26,17 +26,17 @@ export default function Videos({ videos }: VideosProps) {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, type: "spring", stiffness: 80, damping: 20 } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, type: "spring" as const, stiffness: 80, damping: 20 } }
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.08, duration: 0.5, type: "spring", stiffness: 100, damping: 20 }
+      transition: { delay: i * 0.08, duration: 0.5, type: "spring" as const, stiffness: 100, damping: 20 }
     })
   };
 
