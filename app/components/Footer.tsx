@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   SiInstagram,
@@ -5,57 +7,84 @@ import {
   SiYoutube,
   SiAudiomack,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 export default function Footer() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.1 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+  };
+
+  const socials = [
+    { href: "https://instagram.com/trap6109", icon: SiInstagram, label: "Instagram" },
+    { href: "https://spotify.com/trap6109", icon: SiSpotify, label: "Spotify" },
+    { href: "https://youtube.com/@Trap6109-f9e", icon: SiYoutube, label: "YouTube" },
+    { href: "https://audiomack.com/trap666109", icon: SiAudiomack, label: "Audiomack" },
+  ];
+
   return (
-    <footer className="border-t border-[#1d1a28] bg-[#09070d]">
+    <motion.footer
+      className="border-t border-[#1d1a28] bg-[#09070d]"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
+      variants={containerVariants}
+    >
       <div className="mx-auto max-w-345 px-6 py-16 lg:px-10">
 
-        <h2 className="text-center text-xl font-bold uppercase tracking-widest text-[#f0eee9]">
+        <motion.h2
+          className="text-center text-xl font-bold uppercase tracking-widest text-[#f0eee9]"
+          variants={itemVariants}
+        >
           TRAP6109
-        </h2>
+        </motion.h2>
 
         {/* Tagline */}
-        <p className="mt-4 text-center text-lg text-gray-400">
+        <motion.p
+          className="mt-4 text-center text-lg text-gray-400"
+          variants={itemVariants}
+        >
           Follow across socials and stay tuned for new music, videos, and live shows.
-        </p>
+        </motion.p>
 
         {/* Socials */}
-        <div className="mt-10 flex justify-center gap-5">
+        <motion.div
+          className="mt-10 flex justify-center gap-5"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
 
-          <SocialIcon
-            href="https://instagram.com/trap6109"
-            icon={<SiInstagram size={22} />}
-            label="Instagram"
-          />
+          {socials.map((social, i) => (
+            <SocialIcon
+              key={social.label}
+              href={social.href}
+              icon={<social.icon size={22} />}
+              label={social.label}
+              index={i}
+            />
+          ))}
 
-          <SocialIcon
-            href="https://spotify.com/trap6109"
-            icon={<SiSpotify size={22} />}
-            label="Spotify"
-          />
+        </motion.div>
 
-          <SocialIcon
-            href="https://youtube.com/@Trap6109-f9e"
-            icon={<SiYoutube size={22} />}
-            label="YouTube"
-          />
-
-          {/* Audiomack */}
-          <SocialIcon
-            href="https://audiomack.com/trap666109"
-            icon={<SiAudiomack size={22} />}
-            label="Audiomack"
-          />
-
-        </div>
-
-        <p className="mt-12 text-center text-sm text-gray-600">
+        <motion.p
+          className="mt-12 text-center text-sm text-gray-600"
+          variants={itemVariants}
+        >
           © {new Date().getFullYear()} TRAP6109. All rights reserved.
-        </p>
+        </motion.p>
 
       </div>
-    </footer>
+    </motion.footer>
   );
 }
 
@@ -63,34 +92,53 @@ type SocialProps = {
   href: string;
   icon: React.ReactNode;
   label: string;
+  index: number;
 };
 
-function SocialIcon({ href, icon, label }: SocialProps) {
+function SocialIcon({ href, icon, label, index }: SocialProps) {
+  const socialVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { delay: index * 0.08, duration: 0.4 }
+    }
+  };
+
   return (
-    <Link
-      href={href}
-      aria-label={label}
-      target="_blank"
-      className="
-        flex
-        h-14
-        w-14
-        items-center
-        justify-center
-        rounded-full
-        border
-        border-[#34303f]
-        bg-[#131019]
-        text-gray-300
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:border-[#d8b44d]
-        hover:bg-[#d8b44d]
-        hover:text-black
-      "
+    <motion.div
+      custom={index}
+      variants={socialVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      whileHover={{ y: -5, scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
     >
-      {icon}
-    </Link>
+      <Link
+        href={href}
+        aria-label={label}
+        target="_blank"
+        className="
+          flex
+          h-14
+          w-14
+          items-center
+          justify-center
+          rounded-full
+          border
+          border-[#34303f]
+          bg-[#131019]
+          text-gray-300
+          transition-all
+          duration-300
+          hover:border-[#d8b44d]
+          hover:bg-[#d8b44d]
+          hover:text-black
+        "
+      >
+        {icon}
+      </Link>
+    </motion.div>
   );
 }
