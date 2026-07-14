@@ -19,7 +19,7 @@ const anton = Anton({
 });
 
 export const metadata: Metadata = {
-  title: "trap6109",
+  title: "Trap6109 | Official Website",
   description: "Independent Trap & Hip-Hop Artist. Every track tells a story. Every beat leaves a mark.",
 };
 

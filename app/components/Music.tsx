@@ -64,22 +64,8 @@ export default function Music({
 
         {/* Card */}
         <motion.div
-          className="
-            group
-            rounded-4xl
-            border
-            border-[#5b4720]
-            bg-[#131019]
-            p-8
-            md:p-10
-            lg:p-12
-            transition-all
-            duration-500
-            ease-out
-            hover:-translate-y-2
-            hover:scale-[1.01]
-            hover:border-[#d4af37]
-            hover:shadow-[0_0_45px_rgba(212,175,55,0.18)]
+          className="group rounded-4xl border border-[#5b4720] bg-[#131019] p-8 md:p-10 lg:p-12 transition-all duration-500
+            ease-out hover:-translate-y-2 hover:scale-[1.01] hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(212,175,55,0.18)]
           "
           variants={itemVariants}
         >
@@ -93,6 +79,7 @@ export default function Music({
                 src={image}
                 alt={title}
                 fill
+                sizes="(max-width: 1024px) 100vw, 520px"
                 className="object-cover transition duration-700 group-hover:scale-105"
               />
             </motion.div>
@@ -117,23 +104,8 @@ export default function Music({
                 href={streamUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                  mt-10
-                  inline-flex
-                  w-fit
-                  items-center
-                  justify-center
-                  rounded-full
-                  bg-[#e4bf58]
-                  px-8
-                  py-4
-                  text-base
-                  font-semibold
-                  text-black
-                  transition-all
-                  duration-300
-                  hover:scale-105
-                  hover:bg-[#f0ca63]
+                className="mt-10 inline-flex w-fit items-center justify-center rounded-full bg-[#e4bf58] px-8
+                  py-4 text-base font-semibold text-black transition-all duration-300 hover:scale-105  hover:bg-[#f0ca63]
                 "
                 variants={itemVariants}
                 whileHover={{ scale: 1.08 }}
